@@ -22,7 +22,7 @@ const li = images
       `<li class="js-img">
   <img src =${image.url}
   alt =${image.alt} 
-  // width = 300
+ width = 400px
   </img></li>`
   )
   .join("");

@@ -24,14 +24,16 @@ button {
 }
 
 .gallery {
+  padding: 0;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  column-gap: 30px;
+  gap: 30px;
   list-style: none;
 }
 .js-img {
   display: block;
   max-width: 400px;
-  height: 200px;
+  height: 300px;
 }
