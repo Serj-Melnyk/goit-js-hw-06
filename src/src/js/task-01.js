@@ -8,7 +8,7 @@ showNumbersCategory();
 
 const titleEl = document.querySelectorAll(".item");
 // console.log(titleEl);
-titleEl.forEach(function (category) {
+titleEl.forEach((category) => {
   console.log(`Category:`, category.firstElementChild.textContent);
   console.log(`Elements:`, category.querySelectorAll("li").length);
 });
