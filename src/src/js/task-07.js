@@ -1,10 +1,13 @@
-const fontSize = document.querySelector("#font-size-control");
-// console.log(fontSize);
+const input = document.querySelector("#font-size-control");
+// console.log(input);
 
 const text = document.querySelector("#text");
 // console.log(text);
 
-fontSize.addEventListener("range", onRange);
-function onRange(evt) {
-  console.log(evt.currentTarget);
+input.addEventListener("input", onInput);
+function onInput(evt) {
+  const { value } = evt.currentTarget;
+
+  text.style.fontSize = `${value}px`;
+  // console.log(value);
 }
