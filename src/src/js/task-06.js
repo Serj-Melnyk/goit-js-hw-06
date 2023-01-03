@@ -1,14 +1,21 @@
 const input = document.querySelector(`input`);
-const style = document.querySelector(`style`);
-// const styleValid = document.querySelector(`#validation-input`);
-// console.log(style);
+
 // console.log(input);
-input.addEventListener(`input`, onInput);
+input.addEventListener(`blur`, onInput);
 function onInput(evt) {
   const { value } = evt.currentTarget;
   console.log(value);
-  if (value.length === input.dataset.length) {
-    // input.classList.add = `valid`;
-    input.style.borderColor = `green`;
+
+  if (value.length === Number(input.dataset.length)) {
+    input.classList.add("valid");
+  } else if (value.length !== Number(input.dataset.length)) {
+    input.classList.add("invalid");
+    input.classList.remove("valid");
+  } else if (value === "") {
+    input.classList = "";
+    // input.classList.add("invalid");
+    // input.classList.remove("valid");
   }
+
+  console.log(input.classList);
 }
