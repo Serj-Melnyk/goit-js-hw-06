@@ -39,8 +39,16 @@ function onInput(evt) {
 //     box.append(div);
 //   }
 
+<<<<<<< Updated upstream
 //   // for (let i = 0; i <= input.value; i += 1) {
 //   //   amounte = i;
+=======
+function onClick(evt) {
+  // divCnange = `${amounte}`;
+  divCnange += 10;
+  div.style.width = `${divCnange}px`;
+  div.style.height = `${divCnange}px`;
+>>>>>>> Stashed changes
 
 //   //   createBoxes(value);
 //   console.log(amounte);
@@ -52,6 +60,7 @@ function onInput(evt) {
 // const buttonDestroy = document.querySelector("button[data-destroy]");
 // // console.log(buttonDestroy);
 
+<<<<<<< Updated upstream
 // buttonDestroy.addEventListener("click", destroyBoxes);
 // function destroyBoxes(evt) {
 //   div.remove();
@@ -69,6 +78,15 @@ function onInput(evt) {
 //   box.append(div);
 // }
 // console.log(div);
+=======
+buttonDestroy.addEventListener("click", destroyBoxes);
+function destroyBoxes(evt) {
+  // evt.currentTarget.innerHTML = "";
+  div.remove();
+  // box.remove();
+  // divCnange.remove();
+}
+>>>>>>> Stashed changes
 //..........................................................
 // function reset() {
 //   div.remove();
