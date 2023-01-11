@@ -37,3 +37,13 @@ button {
   max-width: 400px;
   height: 300px;
 }
+
+.colorDiv {
+  /* display: flex;
+  flex-direction: row;
+  flex-wrap: ; */
+
+  width: 30px;
+  height: 30px;
+  margin: 5px;
+}
