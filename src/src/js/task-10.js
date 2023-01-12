@@ -8,24 +8,25 @@ const buttonCreate = document.querySelector("button[data-create]");
 const boxes = document.querySelector("#boxes");
 
 input.addEventListener("input", onInput);
-let amounte = "";
+let amount = "";
 function onInput(evt) {
   let { value } = evt.currentTarget;
 
   for (let i = 1; i <= value; i += 1) {
-    amounte = i;
+    amount = i;
   }
-  console.log(amounte);
+  console.log(amount);
 }
 
 buttonCreate.addEventListener("click", onCreate);
 function onCreate(evt) {
   onInput(evt);
-  createBoxes(amounte);
+  createBoxes();
 }
 
 let divCnange = 20;
 let div = document.createElement("div");
+
 function createBoxes() {
   divCnange += 10;
 
