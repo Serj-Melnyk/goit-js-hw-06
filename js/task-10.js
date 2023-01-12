@@ -32,8 +32,10 @@ function createBoxes(amount) {
       ></div>`
     );
     size += 10;
+    // console.log(amount);
   }
 }
+
 function destroyBoxes() {
   boxes.innerHTML = "";
 }

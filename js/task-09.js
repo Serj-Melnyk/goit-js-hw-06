@@ -6,7 +6,7 @@ const widget = document.querySelector(".widget");
 // console.log(widget);
 
 const button = document.querySelector(".change-color");
-// console.log(button);
+
 button.addEventListener("click", onClick);
 
 const colorValue = document.querySelector(".color");
