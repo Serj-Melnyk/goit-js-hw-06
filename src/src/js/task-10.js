@@ -8,36 +8,32 @@ const buttonCreate = document.querySelector("button[data-create]");
 const boxes = document.querySelector("#boxes");
 
 input.addEventListener("input", onInput);
-let amounte = "";
-function onInput(evt) {
-  let { value } = evt.currentTarget;
-
-  for (let i = 1; i <= value; i += 1) {
-    amounte = i;
-  }
-  console.log(amounte);
-}
-
-buttonCreate.addEventListener("click", onCreate);
-function onCreate(evt) {
-  onInput(evt);
-  createBoxes(amounte);
-}
-
-let divCnange = 20;
-let div = document.createElement("div");
-function createBoxes() {
-  divCnange += 10;
-
-  div.style.width = `${divCnange}px`;
-  div.style.height = `${divCnange}px`;
-  div.style.backgroundColor = `${getRandomHexColor()}`;
-
-  boxes.append(div);
-  console.log(div);
-}
-
+buttonCreate.addEventListener("click", () => createBoxes(amount));
 buttonDestroy.addEventListener("click", destroyBoxes);
-function destroyBoxes(evt) {
-  div.remove();
+
+let amount;
+
+function onInput() {
+  amount = Number(input.value);
+  return amount;
+}
+
+let size = 30;
+
+function createBoxes(amount) {
+  size = 30;
+  for (let i = 0; i < amount; i += 1) {
+    boxes.insertAdjacentHTML(
+      "beforeend",
+      `<div
+        class="color"
+        style="width: ${size}px; height: ${size}px;
+        background-color: ${getRandomHexColor()};"
+      ></div>`
+    );
+    size += 10;
+  }
+}
+function destroyBoxes() {
+  boxes.innerHTML = "";
 }

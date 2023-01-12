@@ -12,11 +12,10 @@ function onSubmit(evt) {
     password: password.value,
   };
   // console.log("password", password.value);};
-  if ((email.value, password.value === "")) {
+
+  if (email.value.trim() === "" || password.value.trim() === "") {
     alert(`все поля должны быть заполнены`);
-  } else {
-    console.log(Object.create(obj));
-    console.log(obj);
-  }
+  } else console.log(obj);
+
   form.reset();
 }
